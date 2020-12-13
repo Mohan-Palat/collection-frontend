@@ -6,7 +6,8 @@ var figureSchema = new mongoose.Schema({
     toyLine: String,
     doHave: Boolean,
     imageId: Object,
-    accessoryId: Object
+    accessoryId: Array
   });
   
-module.exports = new mongoose.model('Figure', figureSchema); 
+const Figure =  mongoose.model('Figure', figureSchema); 
+module.exports = Figure;
