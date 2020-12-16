@@ -12,6 +12,7 @@ const app = express();
 // Require Route Files
 const indexRouter = require('./app/routes/index');
 const newRouter = require('./app/routes/new');
+const showRouter = require('./app/routes/show');
 
 // Require DB Configuration File
 // const db = require('./config/db'); //todo
@@ -69,6 +70,7 @@ app.use(cors({ origin: process.env.CLIENT_ORIGIN || `http://localhost:${reactPor
 // Mount imported Routers
 app.use(indexRouter);
 app.use(newRouter);
+app.use(showRouter);
 
 //___________________
 //Listener

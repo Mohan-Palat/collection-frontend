@@ -5,7 +5,7 @@ var figureSchema = new mongoose.Schema({
     year: String,
     toyLine: String,
     doHave: Boolean,
-    imageId: Object,
+    image: Object,
     accessoryId: Array
   });
   

@@ -19,12 +19,6 @@ router.get('/api/figures', (req, res) => {
       res.status(500).json({ error: error });
     });
   });
-// router.get('/', (req, res) => {
-//     ActionFigure.find({}, (error, allFigures) => {
-//         res.render('figures/index.ejs', {
-//             figures: allFigures
-//         });
-//     });
-// });
+
 
 module.exports = router;
