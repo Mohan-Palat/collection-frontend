@@ -13,17 +13,18 @@ class App extends Component {
       figures: [],
       showDetails: Boolean,
       showCreate: Boolean,
-      showList: Boolean
+      showList: Boolean,
+      figureDetails: {}
     }
   }
-  getComponentState = (props) => {
-    console.log('PROPS:', props)
+  getComponentState = (newState) => {
+    console.log('PROPS:', newState)
     this.setState({
-        showDetails: props.showDetails,
-        showCreate: props.showCreate,
-        showList: props.showList
+        showDetails: newState.showDetails,
+        showCreate: newState.showCreate,
+        showList: newState.showList,
+        figureDetails: newState.figure
     })
-    // useForceUpdate()
     // console.log('APP getComponentState', this.state)
 }
   setFigures = (figures) => {
@@ -47,6 +48,7 @@ class App extends Component {
                            showCreate={typeof this.state.showCreate === 'function' ? false : this.state.showCreate }
                            showList={typeof this.state.showList === 'function' ? true : this.state.showList }
                            componentState={this.getComponentState}
+                           figureDetails={this.state.figureDetails}
                            />
 
         {/* }} /> */}

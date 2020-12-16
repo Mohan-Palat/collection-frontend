@@ -15,11 +15,28 @@ class FigureList extends Component {
                   showList: this.props.showList
         }
     }
-
-
+    ////////////////////////////
+    deleteFigure = (id) => {
+        console.log("the figure id to delete: ", id)
+        deleteFigureByID(id)
+        .then((response) => {
+            console.log(`the figure with ${id} has been deleted `)
+            console.log('props in delete', this.props)
+            // rerender UI list after delete without calling DB
+            const newFigureList = this.props.figures.filter((figure)=> {
+                return figure._id !== id; 
+            })
+            this.props.setFigures(newFigureList)
+        })
+        .catch((error) => {
+            console.log('API error', error)
+        })
+    }
+///////////////////////
 
     render() {
         if (this.state.showList){
+            console.log('figure list props', this.props)
             let allFigures = "No Figures!"
 
             if (this.props.figures.length > 0) {
@@ -32,7 +49,9 @@ class FigureList extends Component {
                             doHave={figure.doHave}
                             id={figure._id}
                             key={index} 
-                            componentState={()=>this.props.componentState(this.state)}
+                            // componentState={()=>this.props.componentState()}
+                            componentState={this.props.componentState}
+                            deleteFigure={()=>this.deleteFigure(figure._id)}
                             // componentState={this.props.componentState}
                             />
                 })

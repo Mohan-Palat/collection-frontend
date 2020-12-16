@@ -5,23 +5,26 @@ import { Modal, Form, Button, Label, Header, List } from 'semantic-ui-react';
 class FigureDetail extends Component {
     constructor(props) {
         super(props);
+        // this.props: props
     }
     state = ({
-        figure: this.props.figure,
+        figureDetail: this.props.figureDetail,
         showDetails: true,
         showList: false
 
     })
     render() {
         // this.getState
+        console.log('figureDetail state', this.state)
         console.log('figureDetail props', this.props)
+        // this.props.componentState(this.state)
         return (
             <>
-                <Header>{this.state.figure.name}</Header>
+                <Header>{this.props.figureDetail.name}</Header>
                 <List>
-                    <List.Item>Year: {this.state.figure.year}</List.Item>
-                    <List.Item>Toy Line: {this.state.figure.toyLine}</List.Item>
-                    <List.Item>In Collection?: {this.state.figure.doHave}</List.Item>
+                    <List.Item>Year: {this.props.figure.year}</List.Item>
+                    <List.Item>Toy Line: {this.props.figure.toyLine}</List.Item>
+                    <List.Item>In Collection?: {this.props.figure.doHave}</List.Item>
                 </List>
             </>
         )

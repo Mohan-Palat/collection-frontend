@@ -9,7 +9,7 @@ const getAllFigures = () => {
     return resp
 }
 
-const deletefigureByID = (id) => {
+const deleteFigureByID = (id) => {
     return axios.delete(`http://localhost:8000/api/figures/${id}`)
 }
 
@@ -22,4 +22,4 @@ const createFigure = (figure) => {
     return resp
 }
 
-export { getAllFigures, deletefigureByID, createFigure }
+export { getAllFigures, deleteFigureByID, createFigure }

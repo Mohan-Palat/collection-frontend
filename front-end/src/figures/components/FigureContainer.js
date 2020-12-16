@@ -14,9 +14,11 @@ class FigureContainer extends Component {
             figure: {},
             showDetails: this.props.showDetails,
             showCreate: this.props.showCreate,
-            showList: this.props.showList
+            showList: this.props.showList,
+            figureDetail: this.props.figureDetail
         }
         console.log('Container state:',this.state)
+        console.log('Container props:',this.props)
     }
     componentDidMount() {
         getAllFigures()
@@ -56,9 +58,12 @@ class FigureContainer extends Component {
         console.log('FigureContainer STATE', this.state)
 
         if (this.props.showDetails) {
+            this.setState({figureDetail: this.props.figureDetail})
             return (
-                <FigureDetail figure={this.state.figure}
-                componentState={this.props.getComponentState}
+                <FigureDetail 
+                // figure={this.state.figure}
+                figureDetail={this.state.figureDetail}
+                // componentState={this.props.getComponentState}
                 />
 
             )
@@ -75,7 +80,9 @@ class FigureContainer extends Component {
                     <FigureList figures={this.props.figures}
                                 showList={this.props.showList}
                                 showDetails={this.props.showDetails}
-                                componentState={()=>this.props.componentState(this.state)} />
+                                // componentState={()=>this.props.componentState(this.state)} 
+                                componentState={this.props.componentState}
+                                setFigures={this.setFigures} />
                 </>
             );
         }
