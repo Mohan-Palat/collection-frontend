@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import EditModal from './EditModal'
-import { Header, List } from 'semantic-ui-react';
+import { Header, List, Placeholder } from 'semantic-ui-react';
 import { editFigure } from '../api'
 
 class FigureDetail extends Component {
@@ -58,6 +58,9 @@ class FigureDetail extends Component {
                     <List.Item>Year : {this.props.figureDetails.year}</List.Item>
                     <List.Item>Toy Line : {this.props.figureDetails.toyLine}</List.Item>
                     <List.Item>In Collection : {(this.props.figureDetails.doHave) ? 'True' : 'False'}</List.Item>
+                    <Placeholder>
+                        <Placeholder.Image square/>
+                    </Placeholder>
                     <List.Item><button onClick={() => this.openAndEdit(this.state.figureToEdit)}>Edit Figure</button></List.Item>
 
                 </List>

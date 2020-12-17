@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Table } from 'semantic-ui-react'
+import { Placeholder, Table } from 'semantic-ui-react'
 class Figure extends Component {
     constructor(props) {
         super(props);
@@ -31,7 +31,11 @@ class Figure extends Component {
         return (
             <>
                 <Table.Row>
-                    <Table.Cell>{this.props.image}</Table.Cell>
+                    <Table.Cell>{this.props.image}
+                        <Placeholder>
+                            <Placeholder.Image square/>
+                        </Placeholder>
+                    </Table.Cell>
                     <Table.Cell>{this.props.name}</Table.Cell>
                     <Table.Cell>{this.props.year}</Table.Cell>
                     <Table.Cell>{this.props.toyLine}</Table.Cell>
