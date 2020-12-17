@@ -49,7 +49,7 @@ class FigureList extends Component {
 
             return (
                 <>
-                    <Table color='blue' key='blue' inverted padded>
+                    <Table color='blue' key='blue' inverted padded striped>
                         <Table.Header>
                             <Table.Row>
                                 <Table.HeaderCell>Image</Table.HeaderCell>

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Form, Button, Label, Segment } from 'semantic-ui-react';
+import { Radio, Form, Button, Label, Segment, Message } from 'semantic-ui-react';
 
 
 class CreateForm extends Component {
@@ -23,7 +23,7 @@ class CreateForm extends Component {
             <Segment>
                 <h4>Create Figure</h4>
                 {/* <Form onSubmit={(e) => this.props.addSong(e, this.state)}> */}
-                <Form enctype="multipart/form-data" onSubmit={(e) => {
+                <Form inverted enctype="multipart/form-data" onSubmit={(e) => {
                     console.log('form state', this.state)
                     console.log('form props', this.props)
                     this.props.addFigure(e, this.state);
@@ -37,6 +37,7 @@ class CreateForm extends Component {
                     console.log('updated state', this.state)
                 }}
                 >
+
                     <Label>Name:</Label>
                     <Form.Input type='text' name='name' value={this.state.name} onChange={this.handleChange} />
                     <Label>Year:</Label>
@@ -44,7 +45,7 @@ class CreateForm extends Component {
                     <Label>Toy Line:</Label>
                     <Form.Input type='text' name='toyLine' value={this.state.toyLine} onChange={this.handleChange} />
                     <Label>In Collection:</Label>
-                    <Form.Input type='text' name='doHave' value={this.state.doHave} onChange={this.handleChange} />
+                    <Form.Radio toggle type='radio' name='doHave' value={this.state.doHave} onChange={this.handleChange} />
                     <Label>Upload Image:</Label>
                     <Form.Input type='file' name='image' id='image' onChange={this.handleChange} />
                     <Button type='Submit'>Create Figure</Button>
