@@ -32,7 +32,7 @@ db.on('disconnected', () => console.log('mongo disconnected'));
 db.on('open', () => { });
 
 // Define PORT for the API to run on
-const PORT = 8000;
+const PORT = process.env.PORT || 8000;
 const reactPort = 3000;
 
 /*** Middleware ***/
