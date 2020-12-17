@@ -2,24 +2,24 @@ import axios from 'axios'
 
 // get all figures
 const getAllFigures = () => {
-    let resp = axios.get('http://localhost:8000/api/figures')
+    let resp = axios.get(process.env.REACT_APP_EXPRESS_URL+'/api/figures')
     return resp
 }
 
 // delete by ID
 const deleteFigureByID = (id) => {
-    return axios.delete(`http://localhost:8000/api/figures/${id}`)
+    return axios.delete(process.env.REACT_APP_EXPRESS_URL+`/api/figures/${id}`)
 }
 
 // create new 
 const createFigure = (figure) => {
-    let resp = axios.post('http://localhost:8000/api/figures', figure)
+    let resp = axios.post(process.env.REACT_APP_EXPRESS_URL+'/api/figures', figure)
     return resp
 }
 
 //edit existing by ID and body payload
 const editFigure = (figureToEdit) => {
-    return axios.patch(`http://localhost:8000/api/figures/${figureToEdit.id}`, figureToEdit);
+    return axios.patch(process.env.REACT_APP_EXPRESS_URL+`/api/figures/${figureToEdit.id}`, figureToEdit);
 }
 
 
