@@ -6,8 +6,8 @@ var vehicleSchema = new mongoose.Schema({
     toyLine: String,
     doHave: Boolean,
     imageId: Object,
-    accessoryId: Object,
-    figureId: Object
+    accessoryId: Array,
+    figureId: Array
   });
     
 module.exports = new mongoose.model('Vehicle', vehicleSchema); 

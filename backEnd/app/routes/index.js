@@ -1,16 +1,10 @@
-// Require necessary NPM packages
 const express = require('express');
-
-// Require Mongoose Model for Article
 const Figure = require('../models/figure');
-
-// Instantiate a Router (mini app that only handles routes)
 const router = express.Router();
 
 // INDEX Route
 router.get('/api/figures', (req, res) => {
-    Figure.find()
-    // Return all Articles as an Array
+  Figure.find()
     .then((allFigures) => {
       res.status(200).json({ figures: allFigures });
     })
@@ -18,7 +12,7 @@ router.get('/api/figures', (req, res) => {
     .catch((error) => {
       res.status(500).json({ error: error });
     });
-  });
+});
 
 
 module.exports = router;
