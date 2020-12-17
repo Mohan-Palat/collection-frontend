@@ -38,16 +38,26 @@ class CreateForm extends Component {
                 }}
                 >
 
-                    <Label>Name:</Label>
-                    <Form.Input type='text' name='name' value={this.state.name} onChange={this.handleChange} />
-                    <Label>Year:</Label>
-                    <Form.Input type='text' name='year' value={this.state.year} onChange={this.handleChange} />
-                    <Label>Toy Line:</Label>
-                    <Form.Input type='text' name='toyLine' value={this.state.toyLine} onChange={this.handleChange} />
-                    <Label>In Collection:</Label>
-                    <Form.Radio toggle type='radio' name='doHave' value={this.state.doHave} onChange={this.handleChange} />
-                    <Label>Upload Image:</Label>
-                    <Form.Input type='file' name='image' id='image' onChange={this.handleChange} />
+                    <Form.Field>
+                        <label>Name: </label>
+                        <Form.Input width={4} size='mini' type='text' name='name' value={this.state.name} onChange={this.handleChange} />
+                    </Form.Field>
+                    <Form.Field>
+                        <label>Year: </label>
+                        <Form.Input width={4} type='text' name='year' value={this.state.year} onChange={this.handleChange} />
+                    </Form.Field>
+                    <Form.Field>
+                        <label>Toy Line:</label>
+                        <Form.Input width={4} type='text' name='toyLine' value={this.state.toyLine} onChange={this.handleChange} />
+                    </Form.Field>
+                    <Form.Field>
+                        <label>In Collection:</label>
+                        <Form.Radio width={4} toggle type='radio' name='doHave' value={this.state.doHave} onChange={this.handleChange} />
+                    </Form.Field>
+                    <Form.Field>
+                        <label>Upload Image:</label>
+                        <Form.Input width={4} type='file' name='image' id='image' onChange={this.handleChange} />
+                    </Form.Field>
                     <Button type='Submit'>Create Figure</Button>
                 </Form>
             </Segment>
