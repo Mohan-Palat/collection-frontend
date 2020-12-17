@@ -9,7 +9,8 @@ class Figure extends Component {
         figureForDetails: {
             name: "",
             year: "",
-            toyLine: ""
+            toyLine: "",
+            doHave: Boolean
         },
     }
 

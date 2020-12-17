@@ -54,7 +54,7 @@ class FigureDetail extends Component {
         return (
             <>
                 <Header>{this.props.figureDetails.name}</Header>
-                <List>
+                <List divided horizontal size={'big'}>
                     <List.Item>Year : {this.props.figureDetails.year}</List.Item>
                     <List.Item>Toy Line : {this.props.figureDetails.toyLine}</List.Item>
                     <List.Item>In Collection : {(this.props.figureDetails.doHave) ? 'True' : 'False'}</List.Item>
