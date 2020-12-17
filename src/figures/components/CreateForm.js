@@ -23,7 +23,7 @@ class CreateForm extends Component {
             <Segment>
                 <h4>Create Figure</h4>
                 {/* <Form onSubmit={(e) => this.props.addSong(e, this.state)}> */}
-                <Form inverted enctype="multipart/form-data" onSubmit={(e) => {
+                <Form enctype="multipart/form-data" onSubmit={(e) => {
                     console.log('form state', this.state)
                     console.log('form props', this.props)
                     this.props.addFigure(e, this.state);
