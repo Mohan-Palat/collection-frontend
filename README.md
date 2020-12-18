@@ -1,70 +1,52 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Requirements
+## Routes
+- Index, New, Update, Delete
+## Views
+- Figures, Accessories, Vehicles/Playsets
+- All routes for each view
+## Models
+- Figures, Accessories, Vehicles/Playsets, Images
+# User Stories
 
-## Available Scripts
 
-In the project directory, you can run:
+- As a user, I should be able to create a user/pass that gives me access to only my collection
+## Index
+- As a user, I should be able to view my collection in an index view
+- As a user, I should be able to sort/filter the table displaying my collection
+## New
+- As a user, I should be able to add a new action figure via the a new view and have it saved to a DB
+- As a user, I should be able to add a vehicle/playset via the new view and have it saved to a DB
+- As a user, I should be able to add accessories to the action figures or vehicles in show view and have it saved to a DB
+- As a user, I should be able to add action figures to a vehicle/playset via the show view and have it saved to a DB
+- As a user, I should be able to upload an image when creating a vehicle/playset/accessory, action figure or accessory
 
-### `npm start`
+## Show
+- As a user, I can navigate to the show page by clicking a link in the index view 
+- As a user, I should see information, photos, accessories or in the case of vehicle/playset, an associated action figure in show view
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Update
+- As a user, I should be able to edit the action figure from the show view by being sent to an edit form
+- As a user, I should be able to edit the accessories from the show view by being sent to an edit form
+- As a user, I should be able to edit the vehicle/playset from the show view by being sent to an edit form
+- As a user, I should be able to update (or delete) an image when updating a vehicle/playset, action figure or accessory
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Delete
+- As a user, I should be able to delete an action figure from the index view
+- As a user, I should be able to delete a action figure from the show view
+- As a user, I should be able to delete a vehicle/playset from the show view
+- ? I should be prompted if I want to delete a child item when deleting the parent
+## navigation
+- As a user, I can navigate back to the index view from any page
+- As a user, I can navigate back to the new view from any page
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Technologies Used 
 
-### `npm run build`
+* Node.js
+* React
+* Axios
+* Express 
+* Mongo
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## MRD
